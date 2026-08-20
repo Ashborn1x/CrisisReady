@@ -75,6 +75,48 @@ export interface EmergencyStation {
 
 export type UserRole = 'user' | 'dispatcher' | 'station' | 'admin' | 'citizen' | 'responder';
 
+export interface DispatcherProfile {
+  id: string;
+  name: string;
+  badgeNumber: string;
+  roleTitle: string;
+  center: string;
+  consoleNumber: string;
+  shift: string;
+  shiftStartTime: string;
+  status: 'on_duty' | 'on_call' | 'break' | 'training';
+  avatarUrl: string;
+  email: string;
+  phoneExtension: string;
+  certifications: string[];
+  assignedFrequencies: string[];
+  stats: {
+    callsAnsweredToday: number;
+    avgTriageTime: string;
+    totalDispatches: number;
+    slaCompliance: string;
+    criticalHandled: number;
+  };
+}
+
+export interface DispatchHistoryItem {
+  id: string;
+  incidentCode: string;
+  title: string;
+  type: IncidentType;
+  urgency: UrgencyLevel;
+  location: string;
+  timestamp: string;
+  resolvedAt: string;
+  duration: string;
+  dispatchedUnit: string;
+  stationInvolved: string;
+  callerName: string;
+  outcome: 'Resolved on Scene' | 'Transported to Hospital' | 'Extinguished' | 'False Alarm' | 'Handled by Patrol';
+  operatorNotes: string;
+  triageTimeSec: number;
+}
+
 export type ScreenView =
   | 'home'
   | 'report_new'

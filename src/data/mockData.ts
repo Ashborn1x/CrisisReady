@@ -212,6 +212,128 @@ export const BRAND_LOGO_URL = 'https://lh3.googleusercontent.com/aida-public/AB6
 
 export const DISPATCHER_AVATAR_URL = 'https://lh3.googleusercontent.com/aida-public/AB6AXuAmbWa27hk_haGGxADf541RGcTYZ_p3jqANm8nT79gh62l4OHFASLP4dn7GcrDwiXctIzH6XcvoHbt6HLTeA-O_aQeHK_qgMc80-WcUk8O9-DBOP3mNkoRamMI94xMKXEs2k_AF5GPJEvwks58CToPy_OrP7rE1I7Fv5nZweGNgw0DIrfS4u-2LnITavSm0CiwSipsmAqUA9ApHkdSUvNhzXD9Rcr-U8vf5pHkvJ2Gf8yIuCw36aj4';
 
+export const DEFAULT_DISPATCHER_PROFILE: import('../types').DispatcherProfile = {
+  id: 'disp-042',
+  name: 'Sarah Jenkins',
+  badgeNumber: 'CAD-042',
+  roleTitle: 'Senior 911 Telecommunicator & Dispatcher',
+  center: 'Metro Emergency Communications 911 HQ',
+  consoleNumber: 'Console #04 (Central Sector)',
+  shift: 'Day Shift (07:00 - 19:00)',
+  shiftStartTime: '07:00 Local',
+  status: 'on_duty',
+  avatarUrl: DISPATCHER_AVATAR_URL,
+  email: 's.jenkins@metro911cad.gov',
+  phoneExtension: 'Ext. 4022',
+  certifications: [
+    'Emergency Medical Dispatcher (EMD-Adv)',
+    'Emergency Fire Dispatcher (EFD)',
+    'APCO Public Safety Telecommunicator II',
+    'NIMS ICS-100 / 200 Incident Command'
+  ],
+  assignedFrequencies: [
+    '154.280 MHz (TAC-1 Fire)',
+    '460.125 MHz (TAC-3 Police)',
+    '155.340 MHz (MED-NET Primary)'
+  ],
+  stats: {
+    callsAnsweredToday: 18,
+    avgTriageTime: '42s',
+    totalDispatches: 14,
+    slaCompliance: '99.4%',
+    criticalHandled: 5
+  }
+};
+
+export const DISPATCHER_CALL_HISTORY: import('../types').DispatchHistoryItem[] = [
+  {
+    id: 'hist-101',
+    incidentCode: '#INC-8864',
+    title: 'Structure Fire - Commercial Bakery',
+    type: 'fire',
+    urgency: 'critical',
+    location: '310 N Michigan Ave',
+    timestamp: '13:12 Local',
+    resolvedAt: '13:58 Local',
+    duration: '46 mins',
+    dispatchedUnit: 'Engine 42, Ladder 12',
+    stationInvolved: 'Fire Station #42',
+    callerName: 'Store Manager (Dave B.)',
+    outcome: 'Extinguished',
+    operatorNotes: 'Oven overheating in grease vent. Unit E42 deployed dry chemical suppression. No injuries.',
+    triageTimeSec: 28
+  },
+  {
+    id: 'hist-102',
+    incidentCode: '#INC-8855',
+    title: 'Cardiac Distress / Syncope',
+    type: 'medical',
+    urgency: 'critical',
+    location: '400 S Dearborn St (Floor 8)',
+    timestamp: '12:05 Local',
+    resolvedAt: '12:35 Local',
+    duration: '30 mins',
+    dispatchedUnit: 'EMS Medic 7',
+    stationInvolved: 'Metro General Trauma Center',
+    callerName: 'Building Security Guard',
+    outcome: 'Transported to Hospital',
+    operatorNotes: 'Provided phone pre-arrival CPR guidance until Medic 7 arrived on scene at 12:09. Patient pulse restored.',
+    triageTimeSec: 35
+  },
+  {
+    id: 'hist-103',
+    incidentCode: '#INC-8841',
+    title: 'Two-Car Rear Collision',
+    type: 'accident',
+    urgency: 'medium',
+    location: 'Wacker Dr & Adams St',
+    timestamp: '10:40 Local',
+    resolvedAt: '11:15 Local',
+    duration: '35 mins',
+    dispatchedUnit: 'Patrol 19',
+    stationInvolved: 'Metro Police HQ (1st Pct)',
+    callerName: 'Driver (Amanda C.)',
+    outcome: 'Handled by Patrol',
+    operatorNotes: 'Fender bender blocking curb lane. Tow truck dispatched. Exchange of info completed.',
+    triageTimeSec: 45
+  },
+  {
+    id: 'hist-104',
+    incidentCode: '#INC-8829',
+    title: 'False Alarm - Water Flow Sensor',
+    type: 'fire',
+    urgency: 'low',
+    location: '77 W Washington St',
+    timestamp: '09:15 Local',
+    resolvedAt: '09:32 Local',
+    duration: '17 mins',
+    dispatchedUnit: 'Patrol 19 (Check)',
+    stationInvolved: 'Fire Station #42',
+    callerName: 'Automated Building Telemetry',
+    outcome: 'False Alarm',
+    operatorNotes: 'Plumbing contractor test valve tripped flow monitor. Confirmed with building engineer.',
+    triageTimeSec: 20
+  },
+  {
+    id: 'hist-105',
+    incidentCode: '#INC-8812',
+    title: 'Asthma Attack / Difficulty Breathing',
+    type: 'medical',
+    urgency: 'high',
+    location: 'Millennium Park Pavilion',
+    timestamp: '07:45 Local',
+    resolvedAt: '08:20 Local',
+    duration: '35 mins',
+    dispatchedUnit: 'EMS Medic 7',
+    stationInvolved: 'Metro General Trauma Center',
+    callerName: 'Park Ranger Smith',
+    outcome: 'Resolved on Scene',
+    operatorNotes: 'Nebulizer treatment administered by Medic 7. Oxygen saturation brought back to 98%. Refused transport.',
+    triageTimeSec: 31
+  }
+];
+
 export const MAP_TEXTURE_URL_CHICAGO = 'https://lh3.googleusercontent.com/aida-public/AB6AXuC-yRCqHJzKasnln_5PcdjBhMPOya2YzJG3tzO_LVKHrZlx6qYaRc7BVYTFD2w-KEmLEQoCiBu7NFBJsbzAjU_byEB9Tu5HF-2tn5AKfTdnIeeVs4k1_BHM8a2mhmrycOalqGa6huTFxV007YZZCEUcXqXeeQS_aGYGr_5UIEvZm9XTgQ9tajicLv3WZBLq2OWdEGsDSRZpvtZ2oPtcgkaGwXCNu-okkz9874Vz-x0MclLjlJlnyAE';
 
 export const MAP_TEXTURE_URL_NYC = 'https://lh3.googleusercontent.com/aida-public/AB6AXuC7J-ez_mvilIzwNA6y74ldCOVE3goAoodjWp21eV4h6kkYk3RfLp38tJgF4YgU38nyUGNb4wwVGBoj4Skus5CB5Jk5EdjNNrL_D-6rAipugBaVeYbpeq29jdi05ySvvMztk-rpUnrB76QCa4p4v41yjVHM3oSxs8MgB-Dy6PZ90OWwgo_c0dO41WokBOsWH8SHrQu3BjB84deG0mbtnfUSt-WZzOeHnMvzZJ7aqwRlTeqQ1QX0MIM';
+
