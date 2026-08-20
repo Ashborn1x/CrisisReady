@@ -1,0 +1,7 @@
+{
+  "name": "CrisisReady",
+  "description": "Emergency incident response and dispatch platform with real-time GPS tracking, multi-vehicle dispatch, responder workflow, and offline SMS fallback.",
+  "requestFramePermissions": ["geolocation"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
+
